@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Lumina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./admin.css">
+    <style>
+        /* CSS Tambahan khusus untuk Login Box */
+        .login-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #1a1a1a; z-index: 3000; display: flex; justify-content: center; align-items: center; transition: 0.3s; }
+        .login-overlay.hidden { opacity: 0; visibility: hidden; }
+        .login-box { background: #fff; padding: 3rem; border-radius: 12px; width: 100%; max-width: 400px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .login-box h2 { font-weight: 800; margin-bottom: 0.5rem; font-size: 2rem; color: #1a1a1a; }
+        .login-box h2 span { color: #C29B62; }
+        .login-box p { color: #666; margin-bottom: 2rem; font-size: 0.9rem; }
+        .login-box input { width: 100%; padding: 0.8rem 1rem; margin-bottom: 1rem; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 1rem; }
+        .login-box input:focus { outline: none; border-color: #C29B62; }
+        .btn-primary { background: #C29B62; color: #fff; border: none; padding: 0.8rem; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1.1rem; }
+        .btn-primary:hover { background: #D1A86E; }
+    </style>
+</head>
+<body>
+    <!-- Login Overlay -->
+    <div id="loginOverlay" class="login-overlay">
+        <div class="login-box">
+            <h2>LUMINA <span>Admin</span></h2>
+            <p>Silakan login untuk mengakses sistem kasir dan menu.</p>
+            <input type="email" id="adminEmail" placeholder="Email Admin" />
+            <input type="password" id="adminPassword" placeholder="Password" />
+            <button id="btnLogin" class="btn-primary">Masuk ke Sistem</button>
+            <p id="loginError" style="color: #dc3545; font-size: 0.9rem; margin-top: 1rem; display: none;"></p>
+        </div>
+    </div>
+
+    <!-- Dashboard Utama (Disembunyikan sampai Login berhasil) -->
+    <div class="admin-container" id="dashboardContainer" style="display: none;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>LUMINA. <span>Admin</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="active" data-tab="dashboard">Dashboard</li>
+                <li data-tab="menu">Menu Editor</li>
+                <li data-tab="orders">Pesanan Masuk</li>
+                <li data-tab="settings">Pengaturan Web</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="user-info">
+                    <span id="userEmailDisplay">Memuat...</span>
+                    <button class="btn-logout" id="btnLogout">Logout</button>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <!-- Tab: Dashboard -->
+                <section id="tab-dashboard" class="tab-pane active">
+                    <h1>Dashboard Overview</h1>
+                    <p>Selamat datang di sistem manajemen. Anda telah berhasil terhubung ke Firebase!</p>
+                </section>
+
+                <!-- Tab: Menu Editor -->
+                <section id="tab-menu" class="tab-pane">
+                    <div class="section-header">
+                        <h1>Daftar Menu</h1>
+                        <button class="btn-add">+ Tambah Menu Baru</button>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Nama Menu</th>
+                                <th>Harga</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="menuTableBody">
+                            <tr><td colspan="3">Menarik data dari Firestore...</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+                
+                <section id="tab-orders" class="tab-pane"><h1>Pesanan Masuk</h1></section>
+                <section id="tab-settings" class="tab-pane"><h1>Pengaturan</h1></section>
+            </div>
+        </main>
+    </div>
+    
+    <!-- PENTING: type="module" untuk Firebase SDK -->
+    <script type="module" src="./admin.js"></script>
+</body>
+</html>
