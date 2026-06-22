@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Replace these with the client's brand colors */
+  --color-primary: #1a1a1a;
+  --color-accent: #c8a97e;
+  --color-bg: #fafaf8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+}
