@@ -1,23 +1,27 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 max-w-6xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <p className="text-xs uppercase tracking-widest text-[var(--color-accent)] mb-4">
-            Our Story
+    <section id="about" className="about">
+      <div className="container about-grid">
+        <div className="about-text">
+          <h2>Crafted with <span>Passion</span></h2>
+          <p>
+            Di Lumina Coffee, setiap cangkir adalah karya seni. Kami hanya menggunakan 100% biji kopi
+            Arabica pilihan yang dipanggang sendiri setiap minggunya untuk memastikan kesegaran maksimal.
           </p>
-          <h2 className="text-4xl font-semibold tracking-tight leading-snug mb-6">
-            Built from a love of food {/* TODO: replace */}
-          </h2>
-          <p className="text-gray-500 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-            euismod, urna eu tincidunt consectetur, nisi nisl aliquam eros.
-            {/* TODO: replace with client story */}
+          <p>
+            Ruang kami didesain dengan konsep modern minimalis, cocok untuk bekerja, bersantai,
+            atau sekadar menikmati waktu luang bersama orang terdekat.
           </p>
         </div>
-        <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center text-gray-400 text-sm">
-          About Image Placeholder
-          {/* TODO: replace with next/image */}
+        <div className="about-stats">
+          <div className="stat-box glass-card">
+            <h3>15+</h3>
+            <p>Single Origin</p>
+          </div>
+          <div className="stat-box glass-card">
+            <h3>100%</h3>
+            <p>Biji Lokal</p>
+          </div>
         </div>
       </div>
     </section>

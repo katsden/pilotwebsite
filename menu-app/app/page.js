@@ -2,29 +2,25 @@
 import { useState } from "react";
 import { MENU_ITEMS, CATEGORIES } from "./data/menu";
 import MenuCard from "./components/MenuCard";
-import Cart from "./components/Cart";
-import CategoryFilter from "./components/CategoryFilter";
+import CartSidebar from "./components/CartSidebar";
 
 export default function MenuPage() {
-  const [cart, setCart] = useState([]); // [{ item, qty }]
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [cart, setCart] = useState([]);
+  const [activeCategory, setActiveCategory] = useState("Semua");
   const [cartOpen, setCartOpen] = useState(false);
 
   const filtered =
-    activeCategory === "All"
+    activeCategory === "Semua"
       ? MENU_ITEMS
       : MENU_ITEMS.filter((i) => i.category === activeCategory);
 
   function addToCart(item) {
     setCart((prev) => {
       const existing = prev.find((c) => c.item.id === item.id);
-      if (existing) {
-        return prev.map((c) =>
-          c.item.id === item.id ? { ...c, qty: c.qty + 1 } : c
-        );
-      }
+      if (existing) return prev.map((c) => c.item.id === item.id ? { ...c, qty: c.qty + 1 } : c);
       return [...prev, { item, qty: 1 }];
     });
+    setCartOpen(true);
   }
 
   function removeFromCart(itemId) {
@@ -34,46 +30,54 @@ export default function MenuPage() {
   const totalItems = cart.reduce((sum, c) => sum + c.qty, 0);
 
   return (
-    <div className="min-h-screen pb-32">
-      {/* Header */}
-      <div className="sticky top-0 z-40 bg-white border-b border-gray-100 px-4 py-4 flex items-center justify-between">
+    <div className="menu-page">
+      {/* Topbar */}
+      <div className="menu-topbar">
         <div>
-          <p className="text-xs text-gray-400">Table 5</p> {/* TODO: dynamic from QR param */}
-          <h1 className="text-lg font-semibold">RestoName Menu</h1> {/* TODO */}
+          <p className="table-info">Meja 5 · Dine-in</p>
+          <p className="logo">LUMINA<span>.</span></p>
         </div>
-        <button
-          onClick={() => setCartOpen(true)}
-          className="relative bg-gray-900 text-white px-4 py-2 rounded-full text-sm"
-        >
-          Cart
-          {totalItems > 0 && (
-            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
-              {totalItems}
-            </span>
-          )}
+        <button className="btn-cart" onClick={() => setCartOpen(true)}>
+          🛒 Keranjang
+          {totalItems > 0 && <span className="cart-badge-count">{totalItems}</span>}
         </button>
       </div>
 
-      {/* Category filter */}
-      <CategoryFilter
-        active={activeCategory}
-        onChange={setActiveCategory}
-      />
+      {/* Category Filter */}
+      <div className="menu-filters">
+        {CATEGORIES.map((cat) => (
+          <button
+            key={cat}
+            className={`filter-btn${activeCategory === cat ? " active" : ""}`}
+            onClick={() => setActiveCategory(cat)}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
 
-      {/* Menu grid */}
-      <div className="px-4 pt-4 grid grid-cols-1 gap-4 max-w-lg mx-auto">
+      {/* Menu Grid */}
+      <div className="menu-grid">
         {filtered.map((item) => (
           <MenuCard key={item.id} item={item} onAdd={addToCart} />
         ))}
       </div>
 
-      {/* Cart drawer */}
+      {/* Cart */}
       {cartOpen && (
-        <Cart
+        <CartSidebar
           cart={cart}
           onRemove={removeFromCart}
           onClose={() => setCartOpen(false)}
         />
+      )}
+
+      {/* FAB */}
+      {!cartOpen && (
+        <button className="fab-cart" onClick={() => setCartOpen(true)}>
+          <span className="fab-icon">🛒</span>
+          {totalItems > 0 && <span className="fab-badge">{totalItems}</span>}
+        </button>
       )}
     </div>
   );

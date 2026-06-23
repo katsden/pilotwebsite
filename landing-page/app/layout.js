@@ -1,19 +1,22 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-
 export const metadata = {
-  title: "Resto Name — Landing Page",
-  description: "Welcome to our restaurant",
+  title: "Lumina Coffee | Premium Cafe Experience",
+  description: "Nikmati racikan biji kopi Nusantara terbaik di ruang yang dirancang untuk kenyamanan dan inspirasi.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body className={`${inter.variable} font-sans antialiased`}>
-        {children}
-      </body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
