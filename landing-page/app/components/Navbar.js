@@ -11,17 +11,26 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`glass-nav${scrolled ? " scrolled" : ""}`}>
-      <div className="nav-container">
-        <a href="#" className="logo">LUMINA<span>.</span></a>
-        <div className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#gallery">Vibe</a>
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-[var(--bg-cream)] border-b border-[var(--border-subtle)]" : "bg-transparent"
+      }`}
+    >
+      <div className="container flex items-center justify-between py-5">
+        <a href="#" className="text-2xl" style={{ fontFamily: "var(--font-heading)" }}>
+          Nastra
+        </a>
+
+        {/* Desktop nav — disembunyiin di mobile */}
+        <div className="hidden md:flex gap-8 text-sm">
+          <a href="#menu" className="hover:text-[var(--accent)] transition">Menu</a>
+          <a href="#story" className="hover:text-[var(--accent)] transition">Our Story</a>
+          <a href="#craft" className="hover:text-[var(--accent)] transition">Craft</a>
+          <a href="#order" className="hover:text-[var(--accent)] transition">Order</a>
         </div>
-        {/* TODO: ganti href ke URL Vercel menu-app lu nanti */}
-        <a href="#" className="btn-secondary" style={{ fontSize: "0.8rem", padding: "0.5rem 1rem" }}>
-          Lihat Menu
+
+        <a href="#order" className="btn-secondary hidden sm:inline-block" style={{ fontSize: "0.85rem", padding: "0.6rem 1.4rem" }}>
+          Order Now
         </a>
       </div>
     </nav>
