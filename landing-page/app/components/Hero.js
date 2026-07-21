@@ -16,7 +16,7 @@ export default function Hero() {
           Where Every Layer Tells a Story
         </h1>
         <p className="text-white/85 text-xl md:text-2xl mb-12 max-w-2xl mx-auto">
-          Handcrafted pastries & breads by Nastra Bakery; Slow-proofed, Small-batch, and Made with Intention.
+          Handcrafted pastries & breads by Nastra Bakery: Slow-proofed, Small-batch, and Made with Intention.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <a href="#menu" className="btn-primary text-lg px-10 py-4">Explore Our Menu</a>
