@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Signatures from "./components/Signatures.js";
+import Signatures from "./components/Signatures";
 import About from "./components/About";
 import Footer from "./components/Footer";
 
