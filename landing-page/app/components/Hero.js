@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="flex flex-wrap gap-4 justify-center">
           <a href="#menu" className="btn-primary text-lg px-10 py-4">Explore Our Menu</a>
           
-            href="#story"
+           <a href="#story"
             className="btn-secondary text-lg px-10 py-4"
             style={{ borderColor: "rgba(255,255,255,0.6)", color: "#fff" }}
           >
