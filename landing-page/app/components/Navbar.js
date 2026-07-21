@@ -16,17 +16,15 @@ export default function Navbar() {
         scrolled ? "bg-[var(--bg-cream)] border-b border-[var(--border-subtle)]" : "bg-transparent"
       }`}
     >
-      </nav>
-    <div 
-      className={`container flex items-center justify-between ${
-      scrolled ? "text-[var(--text-primary)]" : "text-white"
-  }`}
-  style={{ paddingTop: "48px", paddingBottom: "48px" }}
->
-  </div>
+      <div 
+        className={`container flex items-center justify-between ${
+          scrolled ? "text-[var(--text-primary)]" : "text-white"
         }`}
+        style={{ paddingTop: "48px", paddingBottom: "48px" }}
       >
-        <a href="#" className="text-4xl leading-none tracking-widest uppercase font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Nastra</a>
+        <a href="#" className="text-4xl leading-none tracking-widest uppercase font-semibold" style={{ fontFamily: "var(--font-heading)" }}>
+          Nastra
+        </a>
 
         <div className="hidden md:flex gap-12 text-base leading-none uppercase tracking-[0.15em] font-medium">
           <a href="#menu" className="hover:opacity-60 transition">Cookies</a>
