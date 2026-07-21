@@ -1,18 +1,18 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Lumina Coffee | Premium Cafe Experience",
-  description: "Nikmati racikan biji kopi Nusantara terbaik di ruang yang dirancang untuk kenyamanan dan inspirasi.",
+  title: "Nastra Bakery | Handcrafted Pastries & Breads",
+  description: "Handcrafted pastries & breads by Nastra Bakery — slow-proofed, small-batch, and made with intention.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
