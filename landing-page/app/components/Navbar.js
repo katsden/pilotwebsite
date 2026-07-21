@@ -16,12 +16,12 @@ export default function Navbar() {
         scrolled ? "bg-[var(--bg-cream)] border-b border-[var(--border-subtle)]" : "bg-transparent"
       }`}
     >
-      <div
-  className={`container flex items-center justify-between ${
+      <div className={`container flex items-center justify-between ${
     scrolled ? "text-[var(--text-primary)]" : "text-white"
   }`}
   style={{ paddingTop: "48px", paddingBottom: "48px" }}
 >
+  </div>
         }`}
       >
         <a href="#" className="text-4xl leading-none tracking-widest uppercase font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Nastra</a>
