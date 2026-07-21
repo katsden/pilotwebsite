@@ -22,7 +22,7 @@ export default function Navbar() {
         }`}
       >
         
-          href="#"
+         <a href="#"
           className="text-2xl tracking-widest uppercase font-semibold"
           style={{ fontFamily: "var(--font-heading)" }}
         >
