@@ -17,7 +17,7 @@ export default function Navbar() {
       }`}
     >
       <div
-        className={`container flex items-center justify-between py-5 ${
+        className={`container flex items-center justify-between py-6 ${
           scrolled ? "text-[var(--text-primary)]" : "text-white"
         }`}
       >
@@ -25,25 +25,15 @@ export default function Navbar() {
           Nastra
         </a>
 
-        <div className="hidden md:flex gap-8 text-sm">
-          <a href="#menu" className="hover:text-[var(--accent)] transition">Menu</a>
-          <a href="#story" className="hover:text-[var(--accent)] transition">Our Story</a>
-          <a href="#craft" className="hover:text-[var(--accent)] transition">Craft</a>
-          <a href="#order" className="hover:text-[var(--accent)] transition">Order</a>
+        <div className="hidden md:flex gap-10 text-xs uppercase tracking-widest">
+          <a href="#menu" className="hover:opacity-70 transition">Cookies</a>
+          <a href="#cakes" className="hover:opacity-70 transition">Cakes</a>
+          <a href="#story" className="hover:opacity-70 transition">About</a>
+          <a href="#order" className="hover:opacity-70 transition">Contact</a>
         </div>
 
-        
-        <a href="#order"
-          className="hidden sm:inline-block"
-          style={{
-            fontSize: "0.85rem",
-            padding: "0.6rem 1.4rem",
-            borderRadius: "999px",
-            border: `1px solid ${scrolled ? "var(--border-subtle)" : "rgba(255,255,255,0.6)"}`,
-            color: scrolled ? "var(--text-primary)" : "#fff",
-          }}
-        >
-          Order Now
+        <a href="#order" className="text-xs uppercase tracking-widest hover:opacity-70 transition">
+          Order
         </a>
       </div>
     </nav>
