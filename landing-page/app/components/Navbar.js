@@ -32,8 +32,8 @@ export default function Navbar() {
           <a href="#order" className="hover:text-[var(--accent)] transition">Order</a>
         </div>
 
-        <a>
-          href="#order"
+        
+        <a href="#order"
           className="hidden sm:inline-block"
           style={{
             fontSize: "0.85rem",
