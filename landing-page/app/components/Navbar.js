@@ -17,8 +17,11 @@ export default function Navbar() {
       }`}
     >
       <div
-        className={`container flex items-center justify-between py-14 ${
-          scrolled ? "text-[var(--text-primary)]" : "text-white"
+  className={`container flex items-center justify-between ${
+    scrolled ? "text-[var(--text-primary)]" : "text-white"
+  }`}
+  style={{ paddingTop: "48px", paddingBottom: "48px" }}
+>
         }`}
       >
         <a href="#" className="text-4xl leading-none tracking-widest uppercase font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Nastra</a>
