@@ -17,9 +17,9 @@ export default function Navbar() {
       }`}
     >
       </nav>
-      <div 
+    <div 
       className={`container flex items-center justify-between ${
-    scrolled ? "text-[var(--text-primary)]" : "text-white"
+      scrolled ? "text-[var(--text-primary)]" : "text-white"
   }`}
   style={{ paddingTop: "48px", paddingBottom: "48px" }}
 >
