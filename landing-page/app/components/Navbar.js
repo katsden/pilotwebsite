@@ -17,7 +17,7 @@ export default function Navbar() {
       }`}
     >
       <div
-        className={`container flex items-center justify-between py-9 ${
+        className={`container flex items-center justify-between py-12 ${
           scrolled ? "text-[var(--text-primary)]" : "text-white"
         }`}
       >
