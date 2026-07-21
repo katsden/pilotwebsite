@@ -16,6 +16,7 @@ export default function Navbar() {
         scrolled ? "bg-[var(--bg-cream)] border-b border-[var(--border-subtle)]" : "bg-transparent"
       }`}
     >
+      </nav>
       <div className={`container flex items-center justify-between ${
     scrolled ? "text-[var(--text-primary)]" : "text-white"
   }`}
