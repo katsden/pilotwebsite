@@ -1,33 +1,32 @@
 export default function Hero() {
   return (
-    <section className="pt-32 md:pt-24">
-      <div className="flex flex-col md:flex-row min-h-[85vh]">
-        {/* Left: Text */}
-        <div className="w-full md:w-1/2 flex items-center px-6 md:px-16 py-12">
-          <div className="max-w-xl">
-            <p className="eyebrow mb-6">Artisan Bakery · Crafted With Intention</p>
-            <h1 className="text-5xl md:text-6xl leading-[1.1] mb-6">
-              Where Every Layer Tells a Story
-            </h1>
-            <p className="text-[var(--text-secondary)] text-lg mb-10">
-              Handcrafted pastries & breads by Nastra Bakery — slow-proofed, small-batch, and made with intention.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="#menu" className="btn-primary">Explore Our Menu</a>
-              <a href="#story" className="btn-secondary">Our Story</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Right: Image */}
-        <div className="w-full md:w-1/2 h-[50vh] md:h-auto">
-          <div
-            className="w-full h-full bg-cover bg-center"
-            style={{
-              // TODO: taruh foto hero lu di /public/hero-bakery.jpg lalu ganti ini
-              backgroundImage: "linear-gradient(135deg, #D9C7A8 0%, #B08D57 100%)",
-            }}
-          />
+    <section
+      className="relative min-h-screen flex items-center justify-center text-center px-6"
+      style={{
+        // TODO: ganti ke foto asli -> "linear-gradient(rgba(26,24,21,0.35), rgba(26,24,21,0.55)), url('/hero-bakery.jpg')"
+        backgroundImage:
+          "linear-gradient(rgba(26,24,21,0.35), rgba(26,24,21,0.55)), linear-gradient(135deg, #D9C7A8 0%, #B08D57 100%)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="max-w-3xl">
+        <p className="eyebrow mb-6 text-white/90">Artisan Bakery · Crafted With Intention</p>
+        <h1 className="text-6xl md:text-8xl leading-[1.05] mb-8 text-white">
+          Where Every Layer Tells a Story
+        </h1>
+        <p className="text-white/85 text-xl md:text-2xl mb-12 max-w-2xl mx-auto">
+          Handcrafted pastries & breads by Nastra Bakery — slow-proofed, small-batch, and made with intention.
+        </p>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <a href="#menu" className="btn-primary text-lg px-10 py-4">Explore Our Menu</a>
+          
+            href="#story"
+            className="btn-secondary text-lg px-10 py-4"
+            style={{ borderColor: "rgba(255,255,255,0.6)", color: "#fff" }}
+          >
+            Our Story
+          </a>
         </div>
       </div>
     </section>
