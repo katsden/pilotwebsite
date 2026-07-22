@@ -23,7 +23,10 @@ export default function About() {
           </div>
         </div>
 
-        <div className="h-[500px]" style={{ backgroundImage: "linear-gradient(135deg, #D9C7A8 0%, #B08D57 100%)" }} />
+       <div
+  className="h-[500px] bg-cover bg-center"
+  style={{ backgroundImage: "url('/about-founder.jpg')" }}
+/>
       </div>
     </section>
   );
