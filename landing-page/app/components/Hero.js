@@ -22,8 +22,15 @@ export default function Hero() {
           <a href="https://wa.me/628129383370?text=Halo%20Nastra%2C%20saya%20mau%20order"
   target="_blank"
   rel="noopener noreferrer"
-  className="text-white text-sm font-semibold uppercase tracking-wider"
-  style={{ fontFamily: "var(--font-heading)" }}
+  className="text-lg px-10 py-4"
+  style={{
+    display: "inline-block",
+    backgroundColor: "#fff",
+    color: "var(--text-primary)",
+    borderRadius: "999px",
+    fontWeight: 500,
+    fontFamily: "var(--font-body)",
+  }}
 >
   Order Now
 </a>
