@@ -49,12 +49,12 @@ export default function Footer() {
         {/* CTA button */}
         <div className="mb-16">
           
-            href="https://wa.me/6281234567890?text=Halo%20Nastra%2C%20saya%20mau%20order"
+           <a href="https://wa.me/628129383370?text=Halo%20Nastra%2C%20saya%20mau%20order"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 text-lg font-semibold px-8 py-4"
             style={{ backgroundColor: "var(--text-primary)", color: "#fff", borderRadius: "999px" }}
-          >
+         /a>
             Start an Order
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>
