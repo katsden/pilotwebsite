@@ -19,7 +19,14 @@ export default function Hero() {
           Handcrafted pastries & breads by Nastra Bakery: Slow-proofed, Small-batch, and Made with Intention.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <a href="#menu" className="btn-primary text-lg px-10 py-4">Explore Our Menu</a>
+          <a href="https://wa.me/628129383370?text=Halo%20Nastra%2C%20saya%20mau%20order"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-white text-sm font-semibold uppercase tracking-wider"
+  style={{ fontFamily: "var(--font-heading)" }}
+>
+  Order Now
+</a>
           
            <a href="#story"
             className="btn-secondary text-lg px-10 py-4"
