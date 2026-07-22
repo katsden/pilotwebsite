@@ -1,8 +1,8 @@
-import Navbar from "./components/Navbar.js";
-import Hero from "./components/Hero.js";
-import Signatures from "./components/Signatures.js";
-import About from "./components/About.js";
-import Footer from "./components/Footer.js";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Signatures from "./components/Signatures";
+import About from "./components/About";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
