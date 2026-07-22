@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="pt-24 pb-10 px-6" style={{ backgroundColor: "var(--accent)", color: "#fff" }}>
+    <footer className="pt-24 pb-10 px-6" style={{ backgroundColor: "#8B6B3D", color: "#fff" }}>
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-16 mb-20">
           {/* Logo cursive + social + email */}
